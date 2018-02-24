@@ -229,7 +229,7 @@ $baseURL = str_replace($_SERVER["DOCUMENT_ROOT"], "", DIR);
 								<tr>
 									<td class="c4n-mon__playername">
 				<span class="c4n-mon__rank-wrapper" title="<?= $rank_text ?>">
-					<span class="c4n-mon__rank-img-wrapper"><img class="c4n-mon__rank" src="/stats/ranks/<?= get_prestige_icon($player['rank']) ?>.png"></span>
+					<span class="c4n-mon__rank-img-wrapper"><img class="c4n-mon__rank" src="<?=$baseURL ?>img/ranks/<?= get_prestige_icon($player['rank']) ?>.png"></span>
 					<sub class="c4n-mon__rank_number"><?= $player['rank'] ?></sub>
 				</span>
 										<span>	<?= $player['name'] ?></a></span>
