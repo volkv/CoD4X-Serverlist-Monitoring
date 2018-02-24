@@ -90,8 +90,10 @@ $baseURL = str_replace($_SERVER["DOCUMENT_ROOT"], "", DIR);
 						$team = 6;
 						break;
 				}
-
-				$d['teams'][$server_id][$team] = $lang[(string)$client['TeamName']];
+				if (array_key_exists((string)$client['TeamName'], $lang))
+					$d['teams'][$server_id][$team] = $lang[(string)$client['TeamName']];
+				else
+					$d['teams'][$server_id][$team] = colorize((string)$client['TeamName']);
 
 				$d['clients'][$server_id][$team][$cid]['name'] = (string)$client['ColorName'];
 				$d['clients'][$server_id][$team][$cid]['score'] = (string)$client['Score'];
@@ -129,11 +131,11 @@ $baseURL = str_replace($_SERVER["DOCUMENT_ROOT"], "", DIR);
 				<td class="c4n-mon__hostname">
 					<?= colorize($d['sv_hostname']) ?>
 				</td>
-				<td title="<?= $lang['connect_to'] ." ".uncolorize($d['sv_hostname']) ?>" class="c4n-mon__ip">
+				<td title="<?= $lang['connect_to'] . " " . uncolorize($d['sv_hostname']) ?>" class="c4n-mon__ip">
 					<a href="cod4://<?= $d['ip'] ?>"><?= $d['ip'] ?></a></td>
 				<td class="c4n-mon__map <?= $d['mapname'] ?>"><?= $d['mapname'] ?></td>
 				<td title="<?= $lang['round_time'] ?>"><?= $d['map_time'] ?></td>
-				<td <?= 'title="'. $lang['oper_playerlist'] ." ". uncolorize($d['sv_hostname']) . '"' ?>>
+				<td <?= 'title="' . $lang['oper_playerlist'] . " " . uncolorize($d['sv_hostname']) . '"' ?>>
 					<div class="c4n-mon__players-graph <?= ($d['players'] < 1) ? ' no-players' : '' ?>">
 						<div class="c4n-mon__players-progress" style="background-color:<?= $d['percent_color'] ?>;width:<?= $d['percent'] ?>%">
 							<div <?= ($d['players'] > 0 ? 'onclick="showPlayers(' . $server_id . ')"' : '') ?> class="c4n-mon__players-count"><?= $d['players'] . '/' . ($d['sv_maxclients'] - $d['sv_privateClients']) ?></div>
@@ -143,27 +145,27 @@ $baseURL = str_replace($_SERVER["DOCUMENT_ROOT"], "", DIR);
 				</td>
 				<td class="c4n-mon__icons">
 					<?php if (isset($linkSS[$server_id])) { ?>
-						<i title="<?= $lang['link_ss']?>" class="c4n-mon__icon">
+						<i title="<?= $lang['link_ss'] ?>" class="c4n-mon__icon">
 							<a href="<?= $linkSS[$server_id] ?>" target="_blank"><img src="<?= $baseURL ?>img/ss.svg"></a>
 						</i>
 					<?php } ?>
 					<?php if (isset($linkSTAT[$server_id])) { ?>
-						<i title="<?= $lang['link_stats']?>" class="c4n-mon__icon">
+						<i title="<?= $lang['link_stats'] ?>" class="c4n-mon__icon">
 							<a href="<?= $linkSTAT[$server_id] ?>" target="_blank"><img src="<?= $baseURL ?>img/stats.svg"></a>
 						</i>
 					<?php } ?>
 					<?php if (isset($linkCHAT[$server_id])) { ?>
-						<i title="<?= $lang['link_chat']?>" class="c4n-mon__icon">
+						<i title="<?= $lang['link_chat'] ?>" class="c4n-mon__icon">
 							<a href="<?= $linkCHAT[$server_id] ?>" target="_blank"><img src="<?= $baseURL ?>img/chat.svg"></a>
 						</i>
 					<?php } ?>
 
-					<i title="<?= $lang['link_gt']?>" class="c4n-mon__icon">
+					<i title="<?= $lang['link_gt'] ?>" class="c4n-mon__icon">
 						<a href="http://www.gametracker.com/server_info/<?= $d['ip'] ?>" target="_blank"><img src="<?= $baseURL ?>img/gt.svg"></a>
 					</i>
 
 					<?php if (isset($linkDONATE[$server_id])) { ?>
-						<i title="<?= $lang['link_donate']?>" class="c4n-mon__icon">
+						<i title="<?= $lang['link_donate'] ?>" class="c4n-mon__icon">
 							<a href="<?= $linkDONATE[$server_id] ?>" target="_blank"><img src="<?= $baseURL ?>img/donate.svg"></a>
 						</i>
 					<?php } ?>
@@ -190,7 +192,7 @@ $baseURL = str_replace($_SERVER["DOCUMENT_ROOT"], "", DIR);
 		<div class="c4n-mon__total-progress" style="width: <?= (int)($d['players_total'] / $d['players_max'] * 100) ?>%; background-color:#2ecc71;"></div>
 		<div class="c4n-mon__total-label"><?= $d['players_total'] . '/' . $d['players_max'] ?></div>
 		<span class="c4n-mon__record">
-				<?= $lang['record']. ": " .$players_record . ' (' . $players_record_date . ')' ?>
+				<?= $lang['record'] . ": " . $players_record . ' (' . $players_record_date . ')' ?>
 		</span>
 	</div>
 
@@ -209,13 +211,13 @@ $baseURL = str_replace($_SERVER["DOCUMENT_ROOT"], "", DIR);
 							<caption><?= $d['teams'][$server_id][$team] ?></caption>
 							<thead>
 							<tr>
-								<th><?= $lang['player']?></th>
-								<th><?= $lang['score']?></th>
-								<th><?= $lang['kills']?></th>
-								<th><?= $lang['deaths']?></th>
-								<th><?= $lang['kd']?></th>
-								<th><?= $lang['assists']?></th>
-								<th><?= $lang['ping']?></th>
+								<th><?= $lang['player'] ?></th>
+								<th><?= $lang['score'] ?></th>
+								<th><?= $lang['kills'] ?></th>
+								<th><?= $lang['deaths'] ?></th>
+								<th><?= $lang['kd'] ?></th>
+								<th><?= $lang['assists'] ?></th>
+								<th><?= $lang['ping'] ?></th>
 							</tr>
 							</thead>
 							<tbody>
