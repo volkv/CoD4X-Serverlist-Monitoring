@@ -7,7 +7,7 @@ Please note that this monitoring works only when you have your **Servers and Web
 * Edit **config.php** as you need
 
 ## Main Features
-* **Simple and Fast** - script just do parse your **serverstatus.xml** without using of anything else like MYSQL or RCON, so it much faster than original RCON+MYSQL(cache) monitorings
+* **Simple and Fast** - script parses your **serverstatus.xml** without using of anything else like MYSQL or RCON, so it much faster than original RCON+MYSQL(cache) monitorings
 * Enhanced **playerslist** with players divided by teams, including their Rank images and captions
 * Server Online **Records** - scripts will remember a number and time when it was maximum players online.
 * Server **Online/Offline** status information
