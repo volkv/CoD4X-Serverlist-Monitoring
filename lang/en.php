@@ -1,0 +1,25 @@
+<?php
+$lang['round_time'] = 'Round Time';
+$lang['Opfor'] = 'Opfor';
+$lang['Marines'] = 'Marines';
+$lang['Spetsnaz'] = 'Spetsnaz';
+$lang['S.A.S.'] = 'SAS';
+$lang['Spectator'] = 'Spectator';
+$lang['Loading...'] = 'Loading..';
+$lang['Connecting...'] = 'Connecting...';
+$lang['Free'] = 'No team';
+$lang['connect_to'] = 'Connect to';
+$lang['oper_playerlist'] ='Show players of';
+$lang['link_ss'] = 'Players Screenshots';
+$lang['link_stats'] = 'Players Stats';
+$lang['link_chat'] = 'Gamechat';
+$lang['link_gt'] = 'Server on GameTracker';
+$lang['link_donate'] = 'Support Server';
+$lang['record'] = 'Record';
+$lang['player'] = 'Player';
+$lang['score'] = 'Score';
+$lang['kills'] = 'Kills';
+$lang['deaths'] = 'Deaths';
+$lang['kd'] = 'K/D';
+$lang['assists'] = 'Assists';
+$lang['ping'] = 'Ping';

@@ -1,0 +1,373 @@
+
+.c4n-mon {
+    box-sizing: border-box;
+    background-color: #181818;
+    color: #d0d0d0;
+}
+
+.c4n-mon__servers, .c4n-mon__players {
+    color: #d0d0d0;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-bottom: 3px;
+}
+
+.c4n-mon__servers .c4n-mon__map {
+    cursor: help;
+}
+
+.c4n-mon__servers .c4n-mon__map:after {
+    background-size: 100px 60px;
+    display: inline-block;
+    width: 100px;
+    height: 60px;
+    content: "";
+}
+
+.c4n-mon__servers .c4n-mon__map:after {
+    transition: opacity .3s ease-in-out;
+    position: absolute;
+    z-index: 1;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.c4n-mon__servers .c4n-mon__map:hover:after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.c4n-mon__servers .c4n-mon__map.mp_backlot:hover:after {
+    background-image: url('../img/maps/mp_backlot.jpg');
+}
+
+.c4n-mon__servers .c4n-mon__map.mp_bloc:hover:after {
+    background-image: url('../img/maps/mp_bloc.jpg');
+}
+
+.c4n-mon__servers .c4n-mon__map.mp_bog:hover:after {
+    background-image: url('../img/maps/mp_bog.jpg');
+}
+
+.c4n-mon__servers .c4n-mon__map.mp_broadcast:hover:after {
+    background-image: url('../img/maps/mp_broadcast.jpg');
+}
+
+.c4n-mon__servers .c4n-mon__map.mp_carentan:hover:after {
+    background-image: url('../img/maps/mp_carentan.jpg');
+}
+
+.c4n-mon__servers .c4n-mon__map.mp_cargoship:hover:after {
+    background-image: url('../img/maps/mp_cargoship.jpg');
+}
+
+.c4n-mon__servers .c4n-mon__map.mp_citystreets:hover:after {
+    background-image: url('../img/maps/mp_citystreets.jpg');
+}
+
+.c4n-mon__servers .c4n-mon__map.mp_convoy:hover:after {
+    background-image: url('../img/maps/mp_convoy.jpg');
+}
+
+.c4n-mon__servers .c4n-mon__map.mp_countdown:hover:after {
+    background-image: url('../img/maps/mp_countdown.jpg');
+}
+
+.c4n-mon__servers .c4n-mon__map.mp_crash:hover:after {
+    background-image: url('../img/maps/mp_crash.jpg');
+}
+
+.c4n-mon__servers .c4n-mon__map.mp_crash_snow:hover:after {
+    background-image: url('../img/maps/mp_crash_snow.jpg');
+}
+
+.c4n-mon__servers .c4n-mon__map.mp_creek:hover:after {
+    background-image: url('../img/maps/mp_creek.jpg');
+}
+
+.c4n-mon__servers .c4n-mon__map.mp_crossfire:hover:after {
+    background-image: url('../img/maps/mp_crossfire.jpg');
+}
+
+.c4n-mon__servers .c4n-mon__map.mp_farm:hover:after {
+    background-image: url('../img/maps/mp_farm.jpg');
+}
+
+.c4n-mon__servers .c4n-mon__map.mp_killhouse:after {
+    background-image: url('../img/maps/mp_killhouse.jpg');
+}
+
+.c4n-mon__servers .c4n-mon__map.mp_overgrown:hover:after {
+    background-image: url('../img/maps/mp_overgrown.jpg');
+}
+
+.c4n-mon__servers .c4n-mon__map.mp_pipeline:hover:after {
+    background-image: url('../img/maps/mp_pipeline.jpg');
+}
+
+.c4n-mon__servers .c4n-mon__map.mp_shipment:hover:after {
+    background-image: url('../img/maps/mp_shipment.jpg');
+}
+
+.c4n-mon__servers .c4n-mon__map.mp_showdown:hover:after {
+    background-image: url('../img/maps/mp_showdown.jpg');
+}
+
+.c4n-mon__servers .c4n-mon__map.mp_strike:hover:after {
+    background-image: url('../img/maps/mp_strike.jpg');
+}
+
+.c4n-mon__servers .c4n-mon__map.mp_vacant:hover:after {
+    background-image: url('../img/maps/mp_vacant.jpg');
+}
+
+.c4n-mon__servers tbody tr:nth-child(even), .c4n-mon__players tbody tr:nth-child(even) {
+    background: #232323;
+}
+
+.c4n-mon__servers td, .c4n-mon__players td {
+    padding: 0 5px;
+    text-align: center;
+}
+
+.c4n-mon__servers tr {
+    height: 27px;
+}
+
+.c4n-mon__servers a, .c4n-mon__players a {
+    color: #d0d0d0;
+    text-decoration: none;
+}
+
+.c4n-mon__servers td.c4n-mon__hostname, .c4n-mon__players td.c4n-mon__playername {
+    font-weight: bold;
+    text-align: left;
+    padding-left: 0;
+}
+
+.c4n-mon__servers .c4n-mon__icons {
+    width: 164px;
+}
+
+svg {
+    transition: all 0.3s ease-in-out;
+}
+
+.c4n-mon__badge {
+    background: red;
+    padding: 8px;
+    border-radius: 2px;
+    display: inline-block;
+}
+
+.c4n-mon__badge_positive {
+    background: #01b001;
+}
+
+.c4n-mon__icon {
+
+    width: 22px;
+    display: inline-block;
+    margin: 0 2px;
+}
+
+.c4n-mon__icon img {
+    transition: opacity .3s ease-in-out;
+}
+
+.c4n-mon__icon img:hover {
+    opacity: .6;
+}
+
+@keyframes progress-bar-stripes {
+    from {
+        background-position: 40px 0;
+    }
+
+    to {
+        background-position: 0 0;
+    }
+}
+
+.c4n-mon__total-progress {
+    animation: 2s linear 0s normal none infinite running progress-bar-stripes;
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+    background-size: 40px 40px;
+    float: left;
+    height: 100%;
+    font-size: 12px;
+    line-height: 20px;
+    color: #ffffff;
+    text-align: center;
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+    transition: width 0.6s ease;
+}
+
+.c4n-mon__total-label {
+    position: absolute;
+    margin-top: 2px;
+    width: 100%;
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.25);
+}
+
+.c4n-mon__record {
+    float: right;
+    margin: 1px 5px 0 0;
+}
+
+.c4n-mon__players {
+    margin: 0 auto;
+    font-size: 12px;
+}
+
+.c4n-mon__players caption {
+    font-size: 18px;
+    color: #ff8400;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.c4n-mon__players thead {
+    color: #00a81f;
+    background-color: #232323;
+}
+
+.c4n-mon__players td:not(.c4n-mon__playername) {
+    text-align: center;
+}
+
+.c4n-mon__players-graph {
+    background-color: #f1f1f1;
+    width: 100%;
+    position: relative;
+    background-color: rgba(123, 123, 123, 0.3);
+    margin: auto;
+    height: 20px;
+    overflow: hidden;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    min-width: 80px;
+
+}
+
+.c4n-mon__players-graph:not(.no-players) {
+    cursor: pointer;
+
+}
+
+.c4n-mon__players-count {
+
+    width: 100%;
+    position: absolute;
+}
+
+.c4n-mon__players-progress {
+    color: #fff;
+    text-align: center;
+    float: left;
+    width: 0;
+    height: 100%;
+    font-size: 12px;
+    font-weight: bold;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.25);
+    background: #5490c0;
+    position: static;
+    white-space: nowrap;
+    line-height: 20px;
+    padding-left: 0;
+    text-indent: 3px;
+}
+
+.c4n-mon__total {
+    width: 100%;
+    margin: 0 auto;
+    background: rgba(182, 182, 182, 0.76);
+    height: 20px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    position: relative;
+    text-align: center;
+
+}
+
+.c4n-mon__table_group {
+    padding: 0 5px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.c4n-mon__playerscontent h2 {
+    margin: 0;
+    text-align: center;
+}
+
+.c4n-mon__playerscontent {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 0;
+    outline: 0;
+    width: 90%;
+    background: #181818;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.c4n-mon__playerslist {
+    transition: opacity .3s ease-in-out;
+    z-index: 10;
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+
+}
+
+.c4n-mon__playerslist .c4n-mon__rank_number {
+    font-size: 8px;
+    margin-left: -2px;
+    bottom: -3px;
+    margin-right: 5px;
+}
+
+.c4n-mon__playerslist img.c4n-mon__rank {
+    max-height: 15px;
+    max-width: 15px;
+}
+
+.c4n-mon__playerslist .c4n-mon__rank-wrapper {
+    text-align: center;
+}
+
+.c4n-mon__rank-img-wrapper {
+    width: 17px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+@media screen and (max-width: 768px) {
+    .c4n-mon__servers .icons {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .c4n-mon__servers .c4n-mon__ip {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .c4n-mon__table_group {
+        width: 48%;
+    }
+}

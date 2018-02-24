@@ -1,0 +1,25 @@
+<?php
+$lang['round_time'] = 'Время Раунда';
+$lang['Opfor'] = 'Сепаратисты';
+$lang['Marines'] = 'Морпехи';
+$lang['Spetsnaz'] = 'Спецназ';
+$lang['S.A.S.'] = 'SAS';
+$lang['Spectator'] = 'Наблюдатели';
+$lang['Loading...'] = 'Загружаются...';
+$lang['Connecting...'] = 'Подключаются...';
+$lang['Free'] = 'Нет команды';
+$lang['connect_to'] = 'Подключиться к';
+$lang['oper_playerlist'] ='Открыть список игроков сервера';
+$lang['link_ss'] = 'Скриншоты игроков';
+$lang['link_stats'] = 'Статистика игроков';
+$lang['link_chat'] = 'Игровой чат';
+$lang['link_gt'] = 'Сервер на Геймтрекере';
+$lang['link_donate'] = 'Поддержать проект (и получить VIP)';
+$lang['record'] = 'Рекорд';
+$lang['player'] = 'Игроок';
+$lang['score'] = 'Счет';
+$lang['kills'] = 'Убийства';
+$lang['deaths'] = 'Смерти';
+$lang['kd'] = 'Уб/См';
+$lang['assists'] = 'Помощь';
+$lang['ping'] = 'Пинг';
