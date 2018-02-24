@@ -93,7 +93,7 @@ $baseURL = str_replace($_SERVER["DOCUMENT_ROOT"], "", DIR);
 				if (array_key_exists((string)$client['TeamName'], $lang))
 					$d['teams'][$server_id][$team] = $lang[(string)$client['TeamName']];
 				else
-					$d['teams'][$server_id][$team] = colorize((string)$client['TeamName']);
+					$d['teams'][$server_id][$team] = uncolorize(colorize((string)$client['TeamName']));
 
 				$d['clients'][$server_id][$team][$cid]['name'] = (string)$client['ColorName'];
 				$d['clients'][$server_id][$team][$cid]['score'] = (string)$client['Score'];
@@ -129,7 +129,7 @@ $baseURL = str_replace($_SERVER["DOCUMENT_ROOT"], "", DIR);
 				</td>
 
 				<td class="c4n-mon__hostname">
-					<?= colorize($d['sv_hostname']) ?>
+					<?= uncolorize(colorize($d['sv_hostname'])) ?>
 				</td>
 				<td title="<?= $lang['connect_to'] . " " . uncolorize($d['sv_hostname']) ?>" class="c4n-mon__ip">
 					<a href="cod4://<?= $d['ip'] ?>"><?= $d['ip'] ?></a></td>
@@ -201,7 +201,7 @@ $baseURL = str_replace($_SERVER["DOCUMENT_ROOT"], "", DIR);
 		<div id="c4n-mon__playerslist_<?= $server_id ?>" class="c4n-mon__playerslist">
 			<div class="c4n-mon__playerscontent">
 
-				<h2><?= colorize($d['servers'][$server_id]) ?></h2>
+				<h2><?= uncolorize(colorize($d['servers'][$server_id])) ?></h2>
 
 				<?php ksort($server);
 				foreach ($server as $team => $players) { ?>
